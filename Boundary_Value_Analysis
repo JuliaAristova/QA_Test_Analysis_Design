@@ -1,0 +1,22 @@
+Task
+You are testing a temperature control system for a horticultural cold storage facility.
+The system receives a the temperature (in full degrees Celsius) as the input. 
+If the temperatyr is between 0 and 2 degrees inclusive, the system displays the message 'temperature OK'
+For lower temperatures. the system displays the message 'temperature too low' and
+for higher temperatures it displays the message 'temperature too high'
+
+Using two-value boundary analysis, which of the following sets of test inputs provides the highest level of boundary coverage?
+
+a) -1, 3
+b) 0, 2
+c) -1, 0, 2, 3
+d) -2, 0, 2, 4
+
+Solution:
+--    -1    | 0   2  |   3 --  
+Boundaries:    -1  0  2  3
+a) 2 boundaries
+b) 2 boundaries
+c) 4 boundaries    - correct answer
+d) 2 boundaries
+
