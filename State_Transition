@@ -1,0 +1,32 @@
+Task
+
+You are applying state transition testing to the hotel room reservation system modeled by the
+following state transition table, with 4 states and 5 different events:
+                 |  Events
+------------------------------------------------------------------------------------------
+State            |   Available  |  NotAvailable  | ChangeRoom  |  Cancel  |   Pay
+------------------------------------------------------------------------------------------
+S1: Requesting   |  S2          |  S3            |             |          |
+------------------------------------------------------------------------------------------
+S2: Confirmed    |              |                |  S1         | S4       |  S4
+------------------------------------------------------------------------------------------
+S3: Waiting list |  S2          |                |             | S4       |
+------------------------------------------------------------------------------------------
+S4: End          |              |                |             |          |
+------------------------------------------------------------------------------------------
+Assuming all test cases start in the ‘Requesting’ state, which of the following test cases,
+represented as sequences of events, achieves the highest valid transitions coverage?
+
+a) NotAvailable, Available, ChangeRoom, NotAvailable, Cancel
+b) Available, ChangeRoom, NotAvailable, Available, Pay
+c) Available, ChangeRoom, Available, ChangeRoom, NotAvailable
+d) NotAvailable, Cancel, ChangeRoom, Available, Pay
+
+SOLUTION:
+a) NotAvailable, Available, ChangeRoom, NotAvailable, Cancel: S1-S3,  S3-S2, S2-S1,  S1-S3 (2 time), S3-S4   --> 4ransitions  
+b) Available, ChangeRoom, NotAvailable, Available, Pay        S1-S2, S2-S1, S1-S3, S3-S2,  S2-S4             --> 5 transitions
+c) Available, ChangeRoom, Available, ChangeRoom, NotAvailable S1-S2, S2-S1, S1-S2 (2 time), S2-S1(2 time), S1-S3   --> 3 transitiona
+d) NotAvailable, Cancel, ChangeRoom, Available, Pay           S1-S3, S3-S4 invalise transitions
+
+b - covers 5 of 7 transitions
+
