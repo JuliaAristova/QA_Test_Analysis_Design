@@ -1,4 +1,29 @@
-Task
+***** TASK 3 *****
+You are working on a project to develop a system to analyze driving test results. You have been  asked to design test cases based on the following decision table.
+--------------------------------------------------------------------------
+                                          R1       R2       R3
+--------------------------------------------------------------------------
+C1: First attempt at the exam?             -       -         F
+C2: Theoretical exam passed?               T       F         -
+C3: Practical exam passed?                 T       -         F
+--------------------------------------------------------------------------
+Issue a driving license?                   X
+Request additional driving lessons?                          X
+Request to take the exam again?                    X
+--------------------------------------------------------------------------
+
+What test data will show that there are contradictory rules in the decision table?
+a) C1 = T, C2 = T, C3 = F
+b) C1 = T, C2 = F, C3 = T
+c) C1 = T, C2 = T, C3 = T and C1 = F, C2 = T, C3 = T
+d) C1 = F, C2 = F, C3 = F
+
+SOLUTION:
+a) Rule is missing (omitted)
+b) R2
+c) R1
+d) contradictory
+***** TASK 4 *****
 
 You are designing test cases based on the following decision table.
 ------------------------------------------------------------------------------
