@@ -1,3 +1,32 @@
+***** TASK 1 *****
+
+You are testing a system that calculates the final course grade for a given student.
+The final grade is assigned based on the final result, according to the following rules:
+0 – 50 points: failed
+51 – 60 points: fair
+61 – 70 points: satisfactory
+71 – 80 points: good
+81 – 90 points: very good
+91 – 100 points: excellent
+You have prepared the following set of test cases:
+                      Final  result        Final  grade
+TC1                   91                   excellent
+TC2                   50                   failed
+TC3                   81                   very good
+TC4                   60                   fair
+TC5                   70                   satisfactory
+TC6                   80                   good
+What is the 2-value Boundary Value Analysis (BVA) coverage for the final result that is achieved with  the existing test cases?
+a) 50%
+b) 60%
+c) 33.3%
+d) 100%
+
+SOLUTION
+Boundary values:  0  50  51  60  61  70  71  80  81  90  91  100      --> 12
+                  -  +        +       +      +    +   -  +    -       --> 6
+6/12 --> 50 coverage
+
 ***** TASK 3 *****
 
 A developer was asked to implement the following business rule:
