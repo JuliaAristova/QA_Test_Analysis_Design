@@ -1,5 +1,23 @@
+***** TASK 3 *****
+You are testing a PIN validator which accepts valid PINs and rejects invalid PINs. A PIN is a sequence of digits. 
+A PIN is valid if it consists of four digits and at least two of them are different.
+Which of the following sets of input test data cover all equivalence partitions for this scenario?
 
-Task 4
+a) 112, 1111, 1234, 123456
+b) 1, 123, 1111, 1234
+c) 12, 112, 1112, 11112
+d) 1, 111, 1111, 11111
+
+SOLUTION
+    0 - 3 digits   |  4 digits & two different | 4 digits & >2 same  | >5 digits
+a     112             1234                        1111                 123456
+b     1, 123          1234                        1111
+c     12, 112         1112                                              11112  
+d     1, 111                                      1111                  11111
+
+a - covers all partitions
+
+***** TASK 4 *****
 The system for celling cinema tickets calculaltes the discount type based on the client's birth year(BY) and on the curren year (CY) as follows:
 
 Let D be the difference between CY and BY, that is D = CY - BY
