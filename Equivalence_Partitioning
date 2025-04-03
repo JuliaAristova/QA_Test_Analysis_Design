@@ -34,6 +34,35 @@ TC2 (ground floor, large garden)
 TC3 (first floor, no garden)
 TC4 (second or higher floor, no garden)
 
+***** TASK 2 *****
+
+Customers of the TestWash car wash chain have cards with a record of the number of washes they have bought so far. 
+The initial value is 0. After entering the car wash, the system increases the number on the card by one. 
+This value represents the number of the current wash. 
+Based on this number the system decides what discount the customer is entitled to.
+For every tenth wash the system gives a 10% discount, 
+and for every twentieth wash, the system gives a further 40% discount (i.e., a 50% discount in total).
+
+Which of the following sets of input data (understood as the numbers of the current wash) achieves
+the highest equivalence partition coverage?
+a) 19, 20, 30
+b) 11, 12, 20
+c) 1, 10, 50
+d) 10, 29, 30, 31
+
+SOLUTION
+
+Partitions:
+A        0-9, 11-19, 21-29, etc.                no discount
+B        10, 30, 50, etc.                       10%
+C        20, 40, 60, etc,                       50%
+
+a) 19, 20, 30         - A C B
+b) 11, 12, 20         - B B C
+c) 1, 10, 50          - A B B
+d) 10, 29, 30, 31     - B A B A
+
+a (19,20,30) - covers 100%
 ***** TASK 3 *****
 
 You are testing a PIN validator which accepts valid PINs and rejects invalid PINs. A PIN is a sequence of digits. 
