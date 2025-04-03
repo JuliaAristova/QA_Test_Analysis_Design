@@ -1,3 +1,37 @@
+Decision Table are used for testing the implementation of requirements that specify how different combinations
+of conditions result in different outcomes.
+
+Decision table
+row - conditions and resulting actions
+columns - a decision rule that defines a unique combination of conditions, and associated actions.
+
+Limited-entry decision tables - all the values of the conditions and actions (except for irrelevant or infeasble ones) are shown as Boolean values (true or false).
+ 
+Extended-entry decision tables - some or all conditions and actions may also take on multiple values (e.g., ranges of numbers, equivalence partitions, dicsrete values).
+
+Conditions:
+  True - condition is satisfied, 
+  False - conditions is not satisfied
+  -     - the value of the condition is irrelevant for the action outcome
+  NA    - condition is infeasable for a given rule
+
+Actions
+  X      - action should occur
+  blank  - action should not occur
+
+A full decision table has enought columns to cover avery combination of conditions,
+The table can be simplified by deleting columns containing infeasible combination of conditions.
+The table can also be minimized by merging columns, in wich some conditions do not affect the outcome, into a single column.
+
+Coverage: columns, divided by the total number of feasible columns, and is expressed as a percentage.
+Coverage is measured as the number of exercised 
+To achieve 100% coverage, test cases must exercise all these columns.
+
+Stregth:
+- provides a systematic approach to identify all the combinations of conditions, some of which migt be overlooked
+- helps to find any gaps or contradictions in the requirements.
+
+
 ***** TASK 1 *****
 
 Your favorite bicycle daily rental store has just introduced a new Customer Relationship Management system and asked you, 
@@ -29,6 +63,40 @@ a) R4  TFT - discount and T shirt - correct
 b) R2  TFF -discount - correct
 c) R6  FFF - na - correct
 d) R8  FTT - incorrect - only members can get T shirts 
+
+***** TASK 2 *****
+
+The following decision table contains the rules for determining the risk of atherosclerosis.
+------------------------------------------------------------------------------------
+                        Rule 1     Rule 2     Rule 3     Rule 4     Rule 5
+------------------------------------------------------------------------------------
+Conditions
+Cholesterol (mg/dl)     ≤124      ≤ 124       125–200    125–200     ≥ 201
+Blood pressure (mmHg)   ≤140      >140        ≤140       >140         –
+------------------------------------------------------------------------------------
+Action
+Risk level             very low   low         medium      high        very high
+
+You designed the test cases with the following test input data:
+TC1: Cholesterol = 125 mg/dl Blood pressure = 141 mm Hg
+TC2: Cholesterol = 200 mg/dl Blood pressure = 201 mm Hg
+TC3: Cholesterol = 124 mg/dl Blood pressure = 201 mm Hg
+TC4: Cholesterol = 109 mg/dl Blood pressure = 200 mm Hg
+TC5: Cholesterol = 201 mg/dl Blood pressure = 140 mm Hg
+What is the decision table coverage achieved by these test cases?
+a) 40%
+b) 60%
+c) 80%
+d) 100%
+
+SOLUTION
+TC1 - Rule 4
+TC2 - Rule 4
+TC3 - Rule 2
+TC4 - Rule 2
+TC5 - Rule 5
+3/5 --> 60%
+
 ***** TASK 3 *****
 
 You are working on a project to develop a system to analyze driving test results. You have been  asked to design test cases based on the following decision table.
