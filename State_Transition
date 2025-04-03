@@ -1,4 +1,34 @@
-Task
+
+State transition Testing
+
+- State Diagram - models the behavior of a system by showing its possible states and valid state transitions.
+  A transition is initiated by an event, which may be additionally qualified by a guard condition.
+  The transitions are ussumed to be instantaneous and may sometimes result in the software taken action.
+  Common syntax : "event [guard condition] / action"
+  Guard conditions and actions can be omitted if they do not exist or are irrelevant fot the tester.
+
+- State Table:
+  rows - represent states, 
+  columns - represent events (together with guard conditions if they exist).
+  cells - represent transitions, and containg the target state, and resulting action
+  empty cell - represent invalid transition
+
+Test case based on a state diagram/table  is usually represented as a sequence of events,
+which results in a sequence of state changes (and actions, if needed),
+One test case may, and usually will, cover several transitions between states.
+
+COVERAGE:
+- All states coverage - coverage item - states.
+      number of exersiced states / total number of states * 100% (100% caverage - all states are exercised)
+      Weaker than valid transition coverage (can be achieved without exercising all the transitions)
+- Valid transition coverage (O-switch coverage) - coverage item - single valid transition
+    number of valid exersiced transitions  / total number of valid transitions * 100% (100% caverage - all valid transitions are exercised)
+    Mostly used coverage criterion.
+    It guarantees full state coverage.
+- All transition - coverage item - all the transitions shown in table
+    total number of valid and invalid exersiced transitions  / total number of valid and invalid transitions * 100% (100% caverage - all valid transitions are exercised,
+                                                                                                                      and all invalid are tried to exercised)
+TASK
 
 You are applying state transition testing to the hotel room reservation system modeled by the
 following state transition table, with 4 states and 5 different events:
