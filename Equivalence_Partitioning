@@ -1,4 +1,41 @@
+***** TASK 1 *****
+
+You are testing a simplified apartment search form which has only two search criteria:
+- floor (with three possible options: ground floor; first floor; second or higher floor)
+- garden type (with three possible options: no garden; small garden; large garden)
+
+Only apartments on the ground floor have gardens. The form has a built-in validation mechanism
+that will not allow you to use the search criteria which violate this rule.
+Each test has two input values: floor and garden type. You want to apply equivalence partitioning (EP) 
+to cover each floor and each garden type in your tests.
+What is the minimal number of test cases to achieve 100% EP coverage?
+
+a) 3
+b) 4
+c) 5
+d) 6
+
+SOLUTION
+
+        FLOOR    | ground    |    first    | second
+-----------------------------------------------------
+GARDEN                             x            x
+NO                
+small                x            ---            ---
+large                x            ---            ---
+
+4 TCs
+“Small garden” and “large garden” can go only with “ground floor”, so we need two test cases with “ground floor” 
+which cover these two “garden type” partitions.
+We need two more test cases to cover the two other “floor” partitions and a remaining ”garden type” partition of “no garden”.
+We need a total of four test cases:
+TC1 (ground floor, small garden)
+TC2 (ground floor, large garden)
+TC3 (first floor, no garden)
+TC4 (second or higher floor, no garden)
+
 ***** TASK 3 *****
+
 You are testing a PIN validator which accepts valid PINs and rejects invalid PINs. A PIN is a sequence of digits. 
 A PIN is valid if it consists of four digits and at least two of them are different.
 Which of the following sets of input test data cover all equivalence partitions for this scenario?
