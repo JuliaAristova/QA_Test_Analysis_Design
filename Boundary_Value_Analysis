@@ -1,4 +1,24 @@
-Task
+***** TASK 3 *****
+
+A developer was asked to implement the following business rule:
+INPUT: value (integer number)
+  IF (value ≤ 100 OR value ≥ 200) THEN write “value incorrect”
+  ELSE write “value OK”
+
+You design the test cases using 2-value boundary value analysis.
+Which of the following sets of test inputs achieves the greatest coverage?
+
+a) 100, 150, 200, 201
+b) 99, 100, 200, 201
+c) 98, 99, 100, 101
+d) 101, 150, 199, 200
+
+SOLUTION
+  --  99    | 100        200  | 201  ---
+2-BVA - 99, 100, 200, 201 --> full coverage - b
+
+***** TASK 4 *****
+
 You are testing a temperature control system for a horticultural cold storage facility.
 The system receives a the temperature (in full degrees Celsius) as the input. 
 If the temperatyr is between 0 and 2 degrees inclusive, the system displays the message 'temperature OK'
@@ -12,7 +32,7 @@ b) 0, 2
 c) -1, 0, 2, 3
 d) -2, 0, 2, 4
 
-Solution:
+SOLUTION:
 --    -1    | 0   2  |   3 --  
 Boundaries:    -1  0  2  3
 a) 2 boundaries
