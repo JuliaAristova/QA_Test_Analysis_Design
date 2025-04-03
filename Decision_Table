@@ -1,4 +1,36 @@
+***** TASK 1 *****
+
+Your favorite bicycle daily rental store has just introduced a new Customer Relationship Management system and asked you, 
+one of their most loyal members, to test it. The implemented features are as follows:
+- Anyone can rent a bicycle, but members receive a 20% discount
+- However, if the return deadline is missed, the discount is no longer available
+-  After 15 rentals, members get a gift: a T-Shirt
+
+Decision table describing the implemented features looks as follows:
+Conditions             R1   R2  R3  R4  R5  R6  R7  R8
+---------------------------------------------------------
+Being a member          T   T   T   T   F   F   F   F
+Missed deadline         T   F   T   F   T   F   F   T
+15th rental             F   F   T   T   F   F   T   T
+---------------------------------------------------------
+Actions
+---------------------------------------------------------
+20% discount                X      X
+Gift T-Shirt                    X  X                X
+---------------------------------------------------------
+Based ONLY on the feature description of the Customer Relationship Management system, which
+of the above rules describes an impossible situation?
+a) R4
+b) R2
+c) R6
+d) R8
+SOLUTION
+a) R4  TFT - discount and T shirt - correct
+b) R2  TFF -discount - correct
+c) R6  FFF - na - correct
+d) R8  FTT - incorrect - only members can get T shirts 
 ***** TASK 3 *****
+
 You are working on a project to develop a system to analyze driving test results. You have been  asked to design test cases based on the following decision table.
 --------------------------------------------------------------------------
                                           R1       R2       R3
