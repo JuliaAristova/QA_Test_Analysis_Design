@@ -1,0 +1,35 @@
+Task
+
+You are designing test cases based on the following decision table.
+------------------------------------------------------------------------------
+                    R1       R2       R3      R4      R5      R6      R7
+-----------------------------------------------------------------------------
+C1: Age             0-18    19-65     19-65   >65     0-18    19-65   >65
+C2: Experience      -       0-4       >4      -       -       -       -
+C3: Registered?     NO      NO        NO      NO      YES     YES     YES
+------------------------------------------------------------------------------
+Category            A       A         B       B       B       D        C
+------------------------------------------------------------------------------
+So far you have designed the following test cases:
+TC1: 19-year-old, unregistered man with no experience; expected result: category A
+TC2: 65-year-old, unregistered woman with 5 years of experience; expected result: category B
+TC3: 66-year-old, registered man with no experience; expected result: category C
+TC4: 65-year-old, registered woman with 4 years of experience; expected result: category D
+
+Which of the following test cases, when added to the existing set of test cases, will increase the decision table coverage?
+
+a) 66-year-old, unregistered man with no experience; expected result: category B
+b) 55-year-old, unregistered woman with 2 years of experience; expected result: category A
+c) 19-year-old, registered woman with 5 years of experience; expected result: category D
+d) No additional test case can increase the already achieved decision table coverage
+
+SOLUTION:
+TC1 - R2
+TC2 - R3
+TC3 - R7
+TC4 - R6
+Coverage 4/7
+a) R4       add coverage
+b) R2 
+c) R6
+d) 0
