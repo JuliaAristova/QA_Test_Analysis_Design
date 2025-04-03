@@ -1,0 +1,35 @@
+
+Task 4
+The system for celling cinema tickets calculaltes the discount type based on the client's birth year(BY) and on the curren year (CY) as follows:
+
+Let D be the difference between CY and BY, that is D = CY - BY
+
+If D < 0          then print the error message 'birth year cannot be greater that current year'
+If 0 <= D < 18    then apply the student discount
+If 18 <= D < 65    then apply no discount
+If D >= 65        then apply the pensioner discount
+
+Your test suite already containg two test cases:
+BY = 1990, CY  = 2020    expected result: no discount
+BY = 2030, CY  = 2029    expected result: print the error message
+
+Which of the following test data sets should be added to achieve full valid equivalence partitioning coverage for the discount type?
+a) BY = 2001,  CY = 2065
+b) BY = 1900,  CY = 1965
+c) BY = 1965,  CY = 1900
+d) BY = 2011,  CY = 2029
+e) BY = 2000,  CY = 2000
+
+Solution  
+ <= -1 |  0 - 17  |  18 - 64  | >= 65
+--------------------------------------
+       |          | 30        | 
+   -1  |          |           |
+---------------------------------------
+       |          | 64        |          a
+       |          |           | 65       b
+   -65 |          |           |          c
+       |          | 18        |          d
+       | 0        |           |          e
+
+b,e 
