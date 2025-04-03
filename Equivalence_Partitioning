@@ -1,3 +1,28 @@
+Equivalence Partitioning (EP) divides data into partitions based on the expectation that all the elements of a given partition
+are to be processed in te same way by the test object.
+
+EP can be identified for any data element related to the test object (inouts, outputs, configuration items, internal values. time-related values,
+and interface parametes).
+Can be 
+- continuos & discrete
+- ordered & unordered
+- finite & infinite
+Must not overlap
+Must be non-empty sets.
+
+VALID partition - contains valid values (should be processed by the tet object)
+INVALID partition - contains invalid values (should be ignored/rejected by the test object)
+
+COVERAGE
+        number of exercised partitions by at least one TC / total number of identified partitions * 100%
+
+100% coverage - all identified valid and invalid partitions are exercised.
+
+Many test items include multiple sets of partitions (test item with more than one input parameter) -->
+TC will cover partitions from different sets of partitions.
+The simplest coverage criterion - Each Choice Coverage - requires to exercise eac partition from each set of partitions at least once
+(see garden&floor), it does not take into account combinations of partitions.
+
 ***** TASK 1 *****
 
 You are testing a simplified apartment search form which has only two search criteria:
