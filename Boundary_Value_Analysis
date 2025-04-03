@@ -27,6 +27,30 @@ Boundary values:  0  50  51  60  61  70  71  80  81  90  91  100      --> 12
                   -  +        +       +      +    +   -  +    -       --> 6
 6/12 --> 50 coverage
 
+***** TASK 2 *****
+
+You are testing a form that verifies the correctness of the length of the password given as input.
+The form accepts a password with the correct length and rejects a password that is too short or toolong.  
+The password length is correct if it has between 6 and 12 characters inclusive. Otherwise, itis considered incorrect.
+At first, the form is empty (password length = 0). You apply boundary value analysis to the “password length” variable.
+
+Your set of test cases achieves 100% 2-value boundary value coverage. The team decided that due to the high risk of this component, 
+test cases should be added to ensure 100% 3-value boundary value coverage.
+Which additional password lengths should be tested to achieve this?
+
+a) 4, 5, 13, 14
+b) 7, 11
+c) 1, 5, 13
+d) 1, 4, 7, 11, 14
+
+SOLUTION
+0-5    6-12  13
+2-BVA  0     5 6      12 13
+3-BVA  0 1 4 5 6 7 11 12 13 14
+d) 1, 4, 7, 11, 14 -- correct answer
+
+
+
 ***** TASK 3 *****
 
 A developer was asked to implement the following business rule:
